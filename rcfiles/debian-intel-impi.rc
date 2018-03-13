@@ -1,0 +1,14 @@
+# Global arguments
+
+autogenargs="F77=mpiifort FC=mpiifort CC=mpiicc CXX=mpiicpc MPIFC=mpiifort MPICC=mpiicc MPIF90=mpiifort"
+makeargs="F77=mpiifort FC=mpiifort CC=mpiicc CXX=mpiicpc MPIFC=mpiifort MPICC=mpiicc MPIF90=mpiifort VERBOSE=1"
+
+# Specific configure arguments for each module
+module_autogenargs['fakepc']="linalg='-L${MKLROOT}/lib/intel64 -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lmkl_blacs_intelmpi_lp64 -lpthread -lm -ldl'"
+#module_autogenargs['fakepc']="linalg='${MKLROOT}/lib/intel64/libmkl_scalapack_lp64.a -Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_lp64.a ${MKLROOT}/lib/intel64/libmkl_sequential.a ${MKLROOT}/lib/intel64/libmkl_core.a ${MKLROOT}/lib/intel64/libmkl_blacs_intelmpi_lp64.a -Wl,--end-group -lpthread -lm -ldl'"
+
+module_autogenargs['fdf']="FC=gfortran"
+
+module_cmakeargs['superlu_dist'] = "-DCMAKE_C_FLAGS='-std=c99'"
+
+module_makeargs['elsi'] = "MPIFC=mpiifort MPICC=mpiicc MPICXX=mpiicpc CXXFLAGS='-std=c++11'"

@@ -11,8 +11,8 @@ if 'GTK_PATH' in os.environ.keys():
 modulesets_dir = SRCDIR
 
 # what modules to build?
-moduleset = 'esl'
-modules = [ 'esl-bundle' ]
+moduleset = 'siesta'
+modules = [ 'siesta-bundle' ]
 
 # policy for modules to build, options are:
 #  - all: build everything requested
