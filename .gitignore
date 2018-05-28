@@ -18,3 +18,9 @@ __pycache__
 !/tarballs/psolver-*.tar.gz
 !/tarballs/scotch-*.tar.gz
 !/tarballs/superlu_dist-*.tar.gz
+
+# Snapcraft files
+/parts
+/prime
+/snap/.snapcraft
+*.snap
