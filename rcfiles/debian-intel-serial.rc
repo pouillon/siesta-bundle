@@ -1,0 +1,9 @@
+# Global arguments
+
+autogenargs="F77=ifort FC=ifort CC=icc CXX=icpc"
+makeargs="F77=ifort FC=ifort CC=icc CXX=icpc VERBOSE=1"
+
+# Specific configure arguments for each module
+module_autogenargs['fakepc']="linalg='-L${MKLROOT}/lib/intel64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread -lm -ldl'"
+
+module_autogenargs['fdf']="FC=ifort"

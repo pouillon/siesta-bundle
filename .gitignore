@@ -8,3 +8,9 @@ __pycache__
 /checkouts/*
 !/checkouts/.gitkeep
 
+
+# Snapcraft files
+/parts
+/prime
+/snap/.snapcraft
+*.snap

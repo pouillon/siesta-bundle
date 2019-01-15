@@ -1,0 +1,15 @@
+name: siesta-bundle
+version: '0.1.0+git'
+summary: Consistent distribution of SIESTA dependencies
+description: |
+  The SIESTA Bundle provides the libraries and utilities you need to build
+  SIESTA. The compatibility of the included versions is systematically checked.
+
+grade: devel
+confinement: devmode
+
+parts:
+  my-part:
+    # See 'snapcraft plugins'
+    plugin: nil
+
