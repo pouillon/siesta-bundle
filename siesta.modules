@@ -6,16 +6,8 @@
 
   <include href="./esl.modules"/>
 
-  <repository name="esl"       type="git"     href="https://gitlab.e-cam2020.eu/esl/"/>
-  <repository name="fdict"     type="tarball" href="https://github.com/zerothi/fdict/releases/download/v0.5.0/"/>
-  <repository name="flook"     type="tarball" href="https://github.com/ElectronicStructureLibrary/flook/releases/download/v0.7.0/"/>
-  <repository name="libpsml"   type="tarball" href="https://launchpad.net/libpsml/trunk/1.1/+download/"/>
-  <repository name="libxc"     type="git"     href="https://gitlab.com/libxc/"/>
-  <repository name="local"     type="tarball" href="./"/>
+  <repository name="local" type="tarball" href="./"/>
   <repository name="netcdf"     type="tarball" href="https://www.unidata.ucar.edu/downloads/netcdf/ftp/"/>
-  <repository name="oncvpsp"    type="tarball" href="http://www.mat-simresearch.com/"/>
-  <repository name="poupouille" type="tarball" href="https://poupouille.org/downloads/"/>
-  <repository name="xmlf90"    type="tarball" href="https://launchpad.net/xmlf90/trunk/1.5/+download/"/>
 
   <autotools id="netcdf" autogen-sh="configure" autogenargs="--disable-dap --disable-examples --disable-hdf4 --disable-v2 --disable-shared --disable-netcdf-4 --enable-static">
     <branch repo="netcdf" module="netcdf-4.4.1.1.tar.gz" version="4.4.1.1"/>
@@ -29,13 +21,13 @@
   </autotools>
 
   <makesys id="oncvpsp">
-    <branch repo="oncvpsp" module="oncvpsp-3.3.1.tar.gz" version="3.3.1" hash="md5:efb8c458956f8b42c0488b654aed83bb">
+    <branch repo="local" module="oncvpsp-3.3.1.tar.gz" version="3.3.1" hash="md5:efb8c458956f8b42c0488b654aed83bb">
       <patch strip="1" file="patches/oncvpsp-3.3.1-psml-1.1.patch" hash="md5:e0550232abad5e60c4a05b63477cab9f"/>
     </branch>
   </makesys>
 
   <autotools id="wannier90" autogen-sh="configure" autogenargs="--disable-shared --enable-static">
-    <branch repo="poupouille" module="wannier90-2.0.1.1" version="2.0.1.1"/>
+    <branch repo="local" module="wannier90-2.0.1.1" version="2.0.1.1"/>
   </autotools>
 
   <metamodule id="siesta-bundle">
